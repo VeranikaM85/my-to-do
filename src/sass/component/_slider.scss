@@ -24,10 +24,16 @@
         outline: 0;  
         transform: scale(1.1);
     }
+    @include media-tablet{
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+    }
 }
 .slide-next{
     background-image: url("/src/assets/icon/slider-next.svg");
 }
 .slide-prev{
-    background-image: url("/src/assets/icon/slider-prev.svg");
+    background-image: url("/src/assets/icon/slider-next.svg");
+    transform: rotate(180deg);
 }
