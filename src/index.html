@@ -8,19 +8,38 @@
     <title>ToDoList</title>
 </head>
 <body>
-    <div class="slider">
-        <div class="wrapper slider__wrapper">
+<main>
+    <section class="weather">
+        <input type="text" class="city">
+        <hr>
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+            <span class="temperature"></span>
+            <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+    </section>
+    <section class="general-info">
+        <div class="general-info__wrapper">
             <div class="slide-prev"></div>
-                <div  class="info-container">
-                    <time class="clock"></time>
-                    <date class="date"></date>
-                    <div class="greeting-container">
-                        <span class="greeting"></span>
-                        <input type="text" class="name">
-                    </div>
+            <div  class="content-container">
+                <time class="clock"></time>
+                <date class="date"></date>
+                <div class="greeting-container">
+                    <span class="greeting"></span>
+                    <input type="text" class="name">
                 </div>
+            </div>
             <div class="slide-next"></div>
         </div>
-    </div>    
+    </section>
+    <section class="actions">
+        <div class="actions__wrapper">
+
+        </div>
+    </section>
+</main>    
 </body>
 </html>

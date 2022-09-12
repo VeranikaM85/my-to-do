@@ -1,5 +1,27 @@
-.wrapper{
+.general-info__wrapper{
     width: $content-width;
-    height: 100vh;
+    height: 60vh;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.weather__wrapper{
+    width: $content-width;
+    height: 20vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions__wrapper{
+    width: $content-width;
+    height: 20vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
