@@ -1,5 +1,7 @@
+
 .tags{
     display: flex;
+
     >*{
         margin-right: 7px;
     }
@@ -23,5 +25,8 @@
     }
     &:hover{
         color: black;
+    }
+    @include media-tablet{
+        margin-left: 0;
     }
 }
