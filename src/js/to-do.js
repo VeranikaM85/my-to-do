@@ -36,35 +36,38 @@ function addTask(){
     tasksContainer.append(newToDoItem)
 }
 
+function doneDelete(){
+var currentTaskDelete = document.querySelectorAll(".delete");
+var currentTaskDone = document.querySelectorAll(".done");
+//delete
+    for(var i=0; i<currentTaskDelete.length; i++){
+        currentTaskDelete[i].onclick = function(){
+            this.parentNode.remove();
+        }
+    }
+    for(var i=0; i<currentTaskDone.length; i++){
+    currentTaskDone[i].onclick = function(){
+        let q=this.parentNode
+        if(q.classList.contains('text-decoration')){
+            this.parentNode.classList.remove('text-decoration');
+            this.parentNode.childNodes[1].classList.remove('done_selected');
+            }
+        else{
+            this.parentNode.classList.add('text-decoration');
+            this.parentNode.childNodes[1].classList.add('done_selected');
+        }
+    }
+    }
+}
+
 //delete and done task
 document.querySelector('.push').onclick = function(){
-    let div = document.querySelector('.tasks')
-    console.log(div)
+
     if(document.querySelector('.newtask_input').value.length == 0){
         alert("Please Enter a Task")
     }else{
         addTask()
-    var currentTaskDelete = document.querySelectorAll(".delete");
-    var currentTaskDone = document.querySelectorAll(".done");
-    //delete
-        for(var i=0; i<currentTaskDelete.length; i++){
-            currentTaskDelete[i].onclick = function(){
-                this.parentNode.remove();
-            }
-        }
-        for(var i=0; i<currentTaskDone.length; i++){
-        currentTaskDone[i].onclick = function(){
-            let q=this.parentNode
-            if(q.classList.contains('text-decoration')){
-                this.parentNode.classList.remove('text-decoration');
-                this.parentNode.childNodes[1].classList.remove('done_selected');
-                }
-            else{
-                this.parentNode.classList.add('text-decoration');
-                this.parentNode.childNodes[1].classList.add('done_selected');
-            }
-        }
-        }
+        doneDelete()
     }
 }
 
@@ -158,6 +161,7 @@ document.querySelector('.all_tag').onclick = function(){
 function getLocalStorageTask() {
     if(localStorage.getItem('tasks')) {
         document.querySelector('.tasks').innerHTML = localStorage.getItem('tasks');
+        doneDelete()
         }
     }
 window.addEventListener('load', getLocalStorageTask)
