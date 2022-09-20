@@ -1,7 +1,7 @@
 const closeBtn = document.querySelector('.modal__close-icon');
 const overlay = document.querySelector('.overlay');
 const modal = document.querySelector('.modal')
-const toDo = document.querySelector('.clock');
+const toDo = document.querySelector('.todo');
 
 toDo.addEventListener('click', ()=>{
     modal.classList.add('active');
@@ -68,6 +68,7 @@ document.querySelector('.push').onclick = function(){
     }else{
         addTask()
         doneDelete()
+        document.querySelector('.newtask_input').value=`${''}`
     }
 }
 
@@ -128,7 +129,7 @@ document.querySelector('.active_tag').onclick = function(){
     }
 }
 
-document.querySelector('.all_tag').onclick = function(){
+function allTag(){
     document.querySelector('.done_tag').classList.remove('tag_selected')
     document.querySelector('.all_tag').classList.add('tag_selected')
     document.querySelector('.active_tag').classList.remove('tag_selected')
@@ -142,9 +143,7 @@ document.querySelector('.all_tag').onclick = function(){
                 if(q.classList.contains('text-decoration')){
                     this.parentNode.classList.remove('text-decoration');
                     this.parentNode.childNodes[1].classList.remove('done_selected');
-                    
-                    }
-                else{
+                }else{
                     this.parentNode.classList.add('text-decoration');
                     this.parentNode.childNodes[1].classList.add('done_selected');
                 }
@@ -152,16 +151,18 @@ document.querySelector('.all_tag').onclick = function(){
         }
     }
 
+document.querySelector('.all_tag').addEventListener('click', allTag);
 
-    function setLocalStorageTask() {
-        localStorage.setItem('tasks', document.querySelector('.tasks').innerHTML);
-    }
-    window.addEventListener ('beforeunload', setLocalStorageTask)
+function setLocalStorageTask() {
+    localStorage.setItem('tasks', document.querySelector('.tasks').innerHTML);
+}
+window.addEventListener ('beforeunload', setLocalStorageTask)
     
 function getLocalStorageTask() {
     if(localStorage.getItem('tasks')) {
         document.querySelector('.tasks').innerHTML = localStorage.getItem('tasks');
-        doneDelete()
+        doneDelete();
+        allTag();
         }
     }
 window.addEventListener('load', getLocalStorageTask)

@@ -6,34 +6,22 @@
 }
 
 .tag{
-    margin-top: 30px ;
+    color: green;
+    margin-top: 20px ;
     margin-left: 20px;
     cursor: pointer;
-    border-radius: 20px;
-    padding: 10px 20px;
+    border-radius: 12px;
+    padding: 8px 24px;
+    transition: .6s;
     @include font(1.8rem, 2.4rem, normal, normal);
     &:first-child{
         margin-left: 0px;
-        background-color: $color-primary;
-    }
-    &:nth-child(2){
-        background-color: darkolivegreen;
-    }
-    &:nth-child(3){
-        background-color:darkred;
     }
     &_selected{
-        color: $color-light;
-        border: 3px solid orangered;
+        color: black;
+        background-color: rgb(0, 128, 0, 0.1);
     }
-
-    &_bordered{
-        border: 1px solid $color-border;
-        background-color: darkolivegreen;
-    }
-
-    &_colored{
-        background-color: $color-tag;
-        margin-bottom: 0;
+    &:hover{
+        color: black;
     }
 }
