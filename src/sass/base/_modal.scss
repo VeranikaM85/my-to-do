@@ -15,7 +15,7 @@
     position: absolute;
     opacity: 0;
     visibility: hidden;
-    width: 80vw;
+    width: 60vw;
     height: 60vh;
     max-height: 80vh;
     top: 50%;
@@ -26,11 +26,19 @@
     background-color: $color-light;
     overflow: auto;
     @extend %custom-scroll;
+    @include media-tablet{
+        width: 80vw;
+        height: 80vh;
+        max-height: 80vh;
+    }
 }
 
 .modal_wrapper{
-    width: 90%;
+    width: 80%;
     margin: auto;
+    @include media-tablet{
+        width: 90%;
+    }
 }
 
 .active{
