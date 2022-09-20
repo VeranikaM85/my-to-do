@@ -1,0 +1,39 @@
+.tags{
+    display: flex;
+    >*{
+        margin-right: 7px;
+    }
+}
+
+.tag{
+    margin-top: 50px ;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 90px;
+    padding: 14px 34px;
+    @include font(2.4rem, 3.2rem, normal, normal);
+    &:first-child{
+        margin-left: 50px;
+        background-color: $color-primary;
+    }
+    &:nth-child(2){
+        background-color: darkolivegreen;
+    }
+    &:nth-child(3){
+        background-color:darkred;
+    }
+    &_selected{
+        color: $color-light;
+        border: 3px solid orangered;
+    }
+
+    &_bordered{
+        border: 1px solid $color-border;
+        background-color: darkolivegreen;
+    }
+
+    &_colored{
+        background-color: $color-tag;
+        margin-bottom: 0;
+    }
+}

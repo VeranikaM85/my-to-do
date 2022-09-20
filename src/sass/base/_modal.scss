@@ -1,0 +1,52 @@
+.overlay {
+   opacity: 0;
+   visibility: hidden;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, .5);
+   z-index: 20;
+   transition: .3s all;
+}
+
+.modal {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 60vw;
+    height: 60vh;
+    max-height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    border-radius: 10px;
+    background-color: $color-light;
+    overflow: auto;
+    @extend %custom-scroll;
+}
+
+.modal_wrapper{
+    width: 80%;
+    margin: auto;
+}
+
+.active{
+   opacity: 1;
+   visibility: visible;
+}
+
+.modal__close-icon {
+    position: absolute;
+    width: 21px;
+    height: 22px;
+    top: 30px;
+    right: 26px;
+    background-image: url("/src/assets/icon/close-ico.svg");
+    cursor: pointer;
+    svg {
+        pointer-events: none;
+    }
+}

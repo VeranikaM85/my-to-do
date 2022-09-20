@@ -6,6 +6,8 @@
 //Base
 @import "./sass/base/normalize";
 @import "./sass/base/body";
+@import "./sass/base/modal";
+@import "./sass/base/tags";
 
 //Layouts
 @import "./sass/layout/wrapper";
@@ -15,3 +17,4 @@
 @import "./sass/component/greeting";
 @import "./sass/component/clock-date";
 @import "./sass/component/weather";
+@import "./sass/component/to-do"
