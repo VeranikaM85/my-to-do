@@ -38,6 +38,8 @@ function addTask(){
 
 //delete and done task
 document.querySelector('.push').onclick = function(){
+    let div = document.querySelector('.tasks')
+    console.log(div)
     if(document.querySelector('.newtask_input').value.length == 0){
         alert("Please Enter a Task")
     }else{
@@ -146,4 +148,16 @@ document.querySelector('.all_tag').onclick = function(){
             }
         }
     }
-   
+
+
+    function setLocalStorageTask() {
+        localStorage.setItem('tasks', document.querySelector('.tasks').innerHTML);
+    }
+    window.addEventListener ('beforeunload', setLocalStorageTask)
+    
+function getLocalStorageTask() {
+    if(localStorage.getItem('tasks')) {
+        document.querySelector('.tasks').innerHTML = localStorage.getItem('tasks');
+        }
+    }
+window.addEventListener('load', getLocalStorageTask)
