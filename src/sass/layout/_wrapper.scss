@@ -1,6 +1,6 @@
 .general-info__wrapper{
     width: $content-width;
-    height: 60vh;
+    height: auto;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,7 @@
 
 .weather__wrapper{
     width: $content-width;
-    height: 20vh;
+    height: auto;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -18,10 +18,9 @@
 
 .actions__wrapper{
     width: $content-width;
-    height: 20vh;
+    height: auto;
     margin: auto;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
 }
 

@@ -1,3 +1,10 @@
+.general-info{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .content-container{
     display: flex;
     flex-direction: column;
@@ -8,8 +15,6 @@
 .clock {
     height: auto;
     width: auto;
-    margin-bottom: 10px;
-    margin-top: 100px;
     @include font(8rem, 10.2rem,600,normal);
     @include media-tablet{
         @include font(4.0rem, 5.6rem, 600, normal);
@@ -19,8 +24,8 @@
 .date {
     height: auto;
     @include font(5rem,7rem,normal,normal);
-    margin-bottom: 70px;
-    margin-top: 70px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     @include media-tablet{
         @include font(3.0rem, 4.2rem, normal, normal);
     }
