@@ -11,6 +11,7 @@ const city=document.querySelector('.city');
 const weatherError=document.querySelector('.weather-error'); 
 let currentCorrectCity='Minsk'
 
+//город после перезагрузки
 const getCity = () => {
     if(localStorage.getItem(city)) {
     city.value = localStorage.getItem(city);}
@@ -32,14 +33,15 @@ async function getWeather(language='en') {
       weatherDescription.textContent = data.weather[0].description;
       wind.textContent = `${weatherTransl[language][0]} ${Math.floor(data.wind.speed)} ${weatherTransl[language][1]}`;
       humidity.textContent = `${weatherTransl[language][2]} ${Math.floor(data.main.humidity)} %`;
-      currentCorrectCity = city.value}
-    else{ 
+      currentCorrectCity = city.value
+    }else{ 
       weatherError.textContent = `${weatherTransl[language][3]} "${city.value}" ${weatherTransl[language][4]}`;
       temperature.textContent=''
       weatherDescription.textContent=''
       wind.textContent=''
-      humidity.textContent=''}
- 
+      humidity.textContent=''
+    }
+  //запись города перед перезагрузкой 
   const setCity = () => {
   localStorage.setItem(city, currentCorrectCity);
   }

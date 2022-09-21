@@ -8,23 +8,23 @@
 }
 
 .tag{
-    color: green;
+    color: $color-primary;
     margin-top: 20px ;
     margin-left: 20px;
     cursor: pointer;
     border-radius: 12px;
     padding: 8px 24px;
     transition: .6s;
-    @include font(1.8rem, 2.4rem, normal, normal);
+    @include font(1.6rem,2.0rem,500,normal);
     &:first-child{
         margin-left: 0px;
     }
     &_selected{
-        color: black;
+        color: $color-dapk;
         background-color: rgb(0, 128, 0, 0.1);
     }
     &:hover{
-        color: black;
+        color: $color-dapk;
     }
     @include media-tablet{
         margin-left: 0;
