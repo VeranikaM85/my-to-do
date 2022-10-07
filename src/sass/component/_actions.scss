@@ -1,6 +1,7 @@
 .todo{
     width: 100px;
     height: 40px;
+    margin-right: 10px;
     color: $color-primary;
     border-radius: 10px;
     border: none;
@@ -23,7 +24,7 @@
 }
 
 .actions{
-    height: 15vh;
+    height: 20vh;
     display: flex;
     flex-direction: row;
     align-items: center;

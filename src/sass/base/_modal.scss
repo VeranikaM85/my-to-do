@@ -41,6 +41,13 @@
     }
 }
 
+.modal__title{
+    @include font(3.0rem, 4.2rem, 400, normal);
+    color: $color-dapk;
+    padding-top: 10px;
+    text-align: left;
+}
+
 .active{
    opacity: 1;
    visibility: visible;
@@ -50,11 +57,18 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 30px;
-    right: 26px;
+    top: 10px;
+    right: 10px;
+    transition: .3s;
     background-image: url("/src/assets/icon/close-ico.svg");
     cursor: pointer;
     svg {
         pointer-events: none;
+    }
+    &:hover{
+        transform: scale(1.1);
+    }
+    &:active{
+        transform: scale(1.2);
     }
 }
