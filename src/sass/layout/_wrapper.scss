@@ -11,9 +11,8 @@
     @include media-minheight{
         display: flex;
         flex-direction: column;
-        padding-left: 30px;
-        height: 100%;
         justify-content: center;
+        width: 60vh;
     }
 }
 
