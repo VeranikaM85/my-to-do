@@ -62,13 +62,16 @@
     flex-wrap: wrap;
     @include font(1.6rem,2.0rem,400,normal);
     align-items: center;
-    word-break: break-all;
     word-wrap:break-word;
+    overflow: hidden;
     @include media-laptop-small{
         width: 83%;
     }
     @include media-tablet-big{
         width: 78%;
+    }
+    @include media-tablet{
+        width: 74%;
     }
     @include media-mobile{
         width: 68%;
