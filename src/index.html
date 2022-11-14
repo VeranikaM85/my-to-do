@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/owfont-regular.css" />
+    <title>ToDoList</title>
+</head>
+<body>
+<main>
+    <section class="weather">
+        <input type="text" class="city">
+        <hr>
+        <i class="weather-icon owf"></i>
+        <div class="weather_wrapper">
+            <div class="weather-error"></div>
+            <div class="description-container">
+                <span class="temperature"></span>
+                <span class="weather-description"></span>
+            </div>
+            <div class="wind"></div>
+            <div class="humidity"></div>
+        </div>    
+    </section>
+    <section class="general-info">
+        <div class="general-info__wrapper">
+            <div class="slide-prev"></div>
+            <div  class="content-container">
+                <div class="clock"></div>
+                <div class="date"></div>
+                <div class="greeting-container">
+                    <span class="greeting"></span>
+                    <input type="text" class="name">
+                </div>
+            </div>
+            <div class="slide-next"></div>
+        </div>
+    </section>
+    <section class="actions">
+        <div class="actions__wrapper">
+            <button class="todo">TO DO</button>
+        </div>
+    </section>
+<div class="modal">
+    <span class="modal__close-icon"></span>
+    <div class="modal_wrapper">
+        <div class="modal__title">Todo List</div>
+        <div class="newtask">
+            <input class="newtask_input" type="text" placeholder="Task to be done.." maxlength="80%">
+            <button class="push newtask_button">Add</button>
+        </div>
+        <div class="strategies__tags tags">
+            <span class="tag tag_selected all_tag">All</span>
+            <span class="tag active_tag">Active</span>
+            <span class="tag done_tag">Done</span>
+        </div> 
+        <div class="tasks"></div>
+        <div class="tasks-done"></div>
+        <div class="tasks-delete"></div>
+</div></div>
+<div class="overlay"></div>
+</main>    
+</body>
+</html>

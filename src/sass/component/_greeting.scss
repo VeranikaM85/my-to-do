@@ -1,0 +1,51 @@
+.greeting-container{
+    flex-direction: row;
+    margin: auto;
+    display: flex;
+    width: auto;
+    height: auto;
+    @include font(4.0rem, 5.6rem, 600, normal);
+    @include media-tablet{
+        min-width: 240px;
+        flex-direction: column;
+        @include font(2.2rem, 3.0rem, 600, normal);
+        text-align: center;
+    }
+    @include media-minheight{
+        padding-top: 18px;
+    }  
+}
+
+.greeting{
+    width: 50%;
+    text-align: right;
+    padding-right: 8px;
+    @include media-tablet{
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+.name {
+    width: 50%;
+    padding-left: 8px;
+    text-align: left;
+    @include font(4.0rem, 5.6rem, 600, normal);
+    color: $color-light;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    &::placeholder{
+        color: #fff;
+        opacity: .6;
+    }
+    @include media-tablet{
+        width: 100%;
+        @include font(2.2rem, 3.0rem, 600, normal);
+        text-align: center;
+        padding-left: 0;
+        padding-top: 10px;
+    }
+}
+ 

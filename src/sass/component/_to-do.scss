@@ -1,0 +1,144 @@
+.newtask{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.newtask_input{
+    width: 75%;
+    height: 45px;
+    padding: 12px;
+    color: $color-dapk;
+    position: relative;
+    border-radius: 5px;
+    @include font(1.6rem,2.0rem,500,normal);
+    border: 2px solid $color-primary;
+}
+
+.newtask_input:focus{
+    outline: none;
+    border-color: $color-primary;
+}
+
+.newtask_button{
+    position: relative;
+    padding: 0;
+    float: right;
+    @include font(1.6rem,2.0rem,500,normal);
+    background-color: $color-primary;
+    border: none;
+    color: $color-light;
+    cursor: pointer;
+    outline: none;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    transition: .3s;
+    &:hover{
+        transform: scale(1.01);
+    }
+    &:active{
+        transform: scale(1.02);
+    }
+}
+
+.tasks {
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    background-color: $color-light;
+    margin-top: 10px;
+}
+
+.task{
+    height: auto;
+    width: 90%;
+    color: $color-dapk;
+    border-bottom: 2px solid $color-primary;
+    cursor: pointer;
+    margin-top: 24px;
+    display: flex;
+    text-align: start;
+    flex-wrap: wrap;
+    @include font(1.6rem,2.0rem,400,normal);
+    align-items: center;
+    word-wrap:break-word;
+    overflow: hidden;
+    @include media-laptop-small{
+        width: 83%;
+    }
+    @include media-tablet-big{
+        width: 78%;
+    }
+    @include media-tablet{
+        width: 74%;
+    }
+    @include media-mobile{
+        width: 68%;
+    }
+}
+
+.task_value{
+    @include font(1.6rem,2.0rem,400,normal);
+    color: $color-dapk;
+}
+
+.done{
+    background-image: url(/src/assets/icon/Done.svg);
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background-color: $color-light;
+    margin-bottom: 10px;
+    right: 40px;
+    position:absolute;
+    transition: .3s;
+    &_selected{
+        background-image: url(/src/assets/icon/Done-selected.svg);
+    }
+    &:hover{
+        transform: scale(1.1);
+    }
+    &:active{
+        transform: scale(1.2);
+    }
+}
+
+.delete{
+    background-image: url(/src/assets/icon/Delete.svg);
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background-color: $color-light;
+    right: 0;
+    margin-bottom: 10px;
+    position:absolute;
+    transition: .3s;
+    &_selected{
+        background-image: url(/src/assets/icon/Delete-selected.svg);
+    }
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.return{
+    background-color:$color-dapk;
+    color: $color-light;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.text-decoration{
+    text-decoration: line-through;
+	text-decoration-color: brown;
+}
+
+.display-none{
+    display: none;
+}
+

@@ -1,0 +1,26 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    @include font(1.6rem, 2.6rem, normal, normal);
+    @extend %font-primary;
+    min-width: 360px;
+    min-height: 100vh;
+    height: 100%;
+    color: $color-light;
+    text-align: center;
+    background: center/cover, rgba(0, 0, 0, 0.4);
+    background-image: cover;
+    background-blend-mode: multiply;
+    transition: background-image 1s ease-in-out;
+}
+
+h1{
+    @extend %font-add;
+    @include font(4.4rem, 5.4rem, bold, normal);
+    @include media-mobile{
+    @include font(3.2rem, 4.2rem, bold, normal)
+    }
+}
+

@@ -1,0 +1,21 @@
+.general-info__wrapper{
+    width: $content-width;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-minheight{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.actions__wrapper{
+    width: $content-width;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
