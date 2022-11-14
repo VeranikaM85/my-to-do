@@ -29,4 +29,7 @@
     @include media-tablet{
         @include font(3.0rem, 4.2rem, normal, normal);
     }
+    @include media-minheight{
+        display: none;
+      }
 }
