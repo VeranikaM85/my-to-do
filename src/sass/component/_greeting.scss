@@ -11,6 +11,9 @@
         @include font(2.2rem, 3.0rem, 600, normal);
         text-align: center;
     }
+    @include media-minheight{
+        padding-top: 18px;
+    }  
 }
 
 .greeting{
@@ -21,7 +24,7 @@
         width: 100%;
         text-align: center;
         padding-right: 0;
-    }    
+    }
 }
 
 .name {
