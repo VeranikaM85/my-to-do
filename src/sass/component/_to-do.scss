@@ -52,17 +52,26 @@
 
 .task{
     height: auto;
-    width: 70%;
+    width: 90%;
     color: $color-dapk;
     border-bottom: 2px solid $color-primary;
     cursor: pointer;
-    margin-bottom: 18px;
+    margin-top: 24px;
     display: flex;
     text-align: start;
     flex-wrap: wrap;
     @include font(1.6rem,2.0rem,400,normal);
     align-items: center;
-    word-wrap:break-word;
+    word-break: break-all;
+    @include media-laptop-small{
+        width: 83%;
+    }
+    @include media-tablet-big{
+        width: 78%;
+    }
+    @include media-mobile{
+        width: 68%;
+    }
 }
 
 .task_value{
