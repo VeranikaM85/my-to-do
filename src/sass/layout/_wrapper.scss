@@ -7,13 +7,14 @@
     align-items: center;
 }
 
-.weather__wrapper{
-    width: $content-width;
-    height: auto;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.weather_wrapper{
+    @include media-minheight{
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+        height: 100%;
+        justify-content: center;
+    }
 }
 
 .actions__wrapper{

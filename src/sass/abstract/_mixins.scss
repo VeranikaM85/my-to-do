@@ -29,3 +29,7 @@
 @mixin media-mobilesmall {
     @media (max-width: $mobile-small-width) { @content;}
 }
+
+@mixin media-minheight {
+    @media (max-height: $min-height) { @content;}
+}
