@@ -51,8 +51,8 @@
 }
 
 .task{
-    overflow: hidden;
-    width: 100%;
+    height: auto;
+    width: 70%;
     color: $color-dapk;
     border-bottom: 2px solid $color-primary;
     cursor: pointer;
@@ -63,6 +63,7 @@
     flex-wrap: wrap;
     @include font(1.6rem,2.0rem,400,normal);
     align-items: center;
+    word-wrap:break-word;
 }
 
 .task_value{
