@@ -5,14 +5,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.weather_wrapper{
     @include media-minheight{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 60vh;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 }
 
